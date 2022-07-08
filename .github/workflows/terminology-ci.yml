@@ -1,0 +1,16 @@
+name: Trigger workflow on Custom Terminology Update
+on:
+  repository_dispatch:
+    types: translation_updated
+  schedule:
+    - cron:  '*/5 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
