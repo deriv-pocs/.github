@@ -1,10 +1,9 @@
-name: Octo Organization CI
-
+name: Trigger workflow on Custom Terminology Update
 on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+  repository_dispatch:
+    types: translation_updated
+  schedule:
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
