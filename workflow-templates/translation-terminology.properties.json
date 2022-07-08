@@ -1,0 +1,5 @@
+{
+    "name": "Transaction terminology trigger from google sheets",
+    "description": "Workflow for receiving google sheets data and uploading as translation terminology for MT translation",
+    "iconName": "example-icon",
+}
